@@ -14,8 +14,13 @@ export function Navbar() {
     <header className="w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-white/10">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
-        {/* Using a placeholder for the logo graphic */}
-        <div className="w-8 h-8 bg-brand-yellow rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm" />
+        <Image
+          src="/assets/Vector.png"
+          alt="ByteSpace Logo"
+          width={24}
+          height={24}
+          className="object-contain h-[24px] w-[24px]"
+        />
         <span className="font-clash text-2xl font-semibold tracking-wide text-white">
           ByteSpace
         </span>
