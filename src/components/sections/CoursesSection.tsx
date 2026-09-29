@@ -79,7 +79,7 @@ const COURSES_DATA = [
 
 export function CoursesSection() {
   return (
-    <section className="w-full flex flex-col items-center pt-[100px] pb-[100px] px-6 bg-[#f9f9f9]">
+    <section className="w-full flex flex-col items-center pt-[100px] pb-[100px] px-6 bg-white">
       
       <div className="flex flex-col items-center gap-[16px] w-full max-w-[917px] mb-12">
         <h2 className="font-poppins text-[44px] font-semibold leading-[1.2] tracking-[-0.01em] text-center w-full max-w-[588px] text-gray-900">

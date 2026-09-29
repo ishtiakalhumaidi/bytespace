@@ -11,7 +11,7 @@ const PARTNER_LOGOS = [
 export function Sponsors() {
   return (
     /* Partners Logo Section */
-    <section className="w-full h-[212px] flex justify-center items-center mt-[80px] bg-[#f5f5f6] py-8">
+    <section className="w-full h-[212px] flex justify-center items-center bg-[#f5f5f6] py-8">
    
       <div className="flex w-full max-w-[1132px] h-[42px] gap-[72px] items-center justify-center overflow-hidden">
         
