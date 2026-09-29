@@ -26,19 +26,16 @@ export function CourseCard({
 }: CourseCardProps) {
   return (
     <div className="flex flex-col w-full max-w-[373px] h-[384px] rounded-[24px] border border-gray-200 p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
-      {/* Thumbnail & Frosted Badges */}
       <div className="relative w-full h-[180px] rounded-[16px] overflow-hidden mb-4 shrink-0">
         <Image src={imageSrc} alt={title} fill className="object-cover" />
 
-        {/* Blur Badges Container */}
-        <div className="absolute bottom-3 left-3 right-3 flex gap-2 overflow-x-auto no-scrollbar">
+        <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <BlurBadge text={`${lessons} Lessons`} />
           <BlurBadge text={duration} />
           <BlurBadge text={`${comments} Comments`} />
         </div>
       </div>
 
-      {/* Title & Rating Row */}
       <div className="flex justify-between items-start mb-1">
         <h3 className="font-poppins font-bold text-[20px] leading-[1.2] text-black line-clamp-1">
           {title}
@@ -51,14 +48,12 @@ export function CourseCard({
         </div>
       </div>
 
-      {/* Author Row */}
       <p className="font-satoshi text-[13px] mb-5">
         <span className="text-gray-500">by </span>
         <span className="text-blue-600">{author}</span>
       </p>
 
       <div className="flex items-center gap-4 mt-auto mb-5">
-        {/* Level Badge */}
         <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-100">
           <BarChart className="w-4 h-4 text-gray-600" />
           <span className="font-satoshi text-[13px] font-medium text-gray-700">
@@ -79,7 +74,6 @@ export function CourseCard({
         </div>
       </div>
 
-      {/* Price Row */}
       <div className="font-poppins font-bold text-[24px] text-brand-blue leading-none">
         ${price}
         <span className="font-satoshi text-[13px] font-normal text-gray-500">
@@ -90,7 +84,6 @@ export function CourseCard({
   );
 }
 
-// Micro-Component for the frosted glass badges
 function BlurBadge({ text }: { text: string }) {
   return (
     <div className="bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full shrink-0">
@@ -101,7 +94,6 @@ function BlurBadge({ text }: { text: string }) {
   );
 }
 
-// Micro-Component for the overlapping avatars
 function Avatar({ placeholderSrc }: { placeholderSrc: string }) {
   return (
     <div className="relative w-8 h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden shrink-0 z-0">

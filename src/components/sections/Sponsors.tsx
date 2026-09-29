@@ -10,15 +10,12 @@ const PARTNER_LOGOS = [
 
 export function Sponsors() {
   return (
-    /* Partners Logo Section */
-    <section className="w-full h-[212px] flex justify-center items-center bg-[#f5f5f6] py-8">
-   
-      <div className="flex w-full max-w-[1132px] h-[42px] gap-[72px] items-center justify-center overflow-hidden">
-        
+    <section className="w-full min-h-[212px] xl:h-[212px] flex justify-center items-center bg-[#f5f5f6] py-8 px-4">
+      <div className="flex flex-wrap xl:flex-nowrap w-full max-w-[1132px] xl:h-[42px] gap-x-6 gap-y-6 sm:gap-x-10 xl:gap-[72px] items-center justify-center overflow-hidden">
         {PARTNER_LOGOS.map((logo) => (
           <div
             key={logo.id}
-            className="relative flex items-center justify-start w-[170px] h-[41px] shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+            className="relative flex items-center justify-start w-[90px] h-[28px] sm:w-[130px] sm:h-[34px] xl:w-[170px] xl:h-[41px] shrink-0 opacity-60 hover:opacity-100 transition-opacity"
           >
             <Image
               src={logo.src}
@@ -28,7 +25,6 @@ export function Sponsors() {
             />
           </div>
         ))}
-        
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
+import { Logo } from "../ui/Logo";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -14,19 +15,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 z-50 w-full bg-brand-blue">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/assets/Vector.png"
-            alt="ByteSpace Logo"
-            width={24}
-            height={24}
-            className="h-6 w-6 object-contain"
-          />
-
-          <span className="font-clash text-2xl font-semibold tracking-wide text-white">
-            ByteSpace
-          </span>
-        </Link>
+       <Logo className="text-white"/>
 
         {/* Center Navigation */}
         <nav className="hidden items-center gap-8 md:flex">

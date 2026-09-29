@@ -17,7 +17,7 @@ export function RevenueCard({
 }) {
   return (
     <div
-      className={`bg-blue-600 rounded-[16px] p-[16px] shadow-xl flex flex-col gap-[8px] text-white ${className}`}
+      className={`bg-blue-600 rounded-[16px] p-[16px] shadow-xl flex flex-col gap-[8px] text-white ${className ?? ""}`}
     >
       <div className="flex flex-col">
         <span className="font-satoshi text-[13px] text-blue-100 leading-tight">
@@ -42,4 +42,3 @@ export function RevenueCard({
     </div>
   );
 }
-

@@ -20,10 +20,9 @@ const CHECKLIST = [
 
 export function FeatureSection() {
   return (
-    <section className="relative w-full flex flex-col items-center pt-[100px] pb-[100px] px-6 gap-[120px] overflow-hidden ">
-      {/* --- BACKGROUND BLOBS --- */}
+    <section className="relative w-full flex flex-col items-center py-16 md:py-[100px] px-4 sm:px-6 gap-16 md:gap-[120px] overflow-hidden">
       <div
-        className="absolute w-[1137px] h-[1137px] top-[-466px] left-[-152px] -z-10 pointer-events-none blur-[40px]"
+        className="absolute w-[600px] h-[600px] top-[-250px] left-[-200px] lg:w-[1137px] lg:h-[1137px] lg:top-[-466px] lg:left-[-152px] -z-10 pointer-events-none blur-[40px]"
         style={{
           background:
             "radial-gradient(50% 50% at 50% 50%, rgba(203, 252, 1, 0.4) 0%, rgba(203, 252, 1, 0.092) 53%, rgba(203, 252, 1, 0.024) 75%, rgba(203, 252, 1, 0) 100%)",
@@ -31,24 +30,21 @@ export function FeatureSection() {
       />
 
       <div
-        className="absolute w-[672px] h-[672px] top-[946px] left-[-287px] -z-10 pointer-events-none blur-[40px] "
+        className="absolute w-[340px] h-[340px] top-[700px] left-[-170px] lg:w-[672px] lg:h-[672px] lg:top-[946px] lg:left-[-287px] -z-10 pointer-events-none blur-[40px]"
         style={{
           background:
             "radial-gradient(50% 50% at 50% 50%, rgba(0, 59, 226, 0.24) 0%, rgba(0, 59, 226, 0.0552) 53%, rgba(0, 59, 226, 0.0144) 75%, rgba(0, 59, 226, 0) 100%)",
         }}
       />
-      {/* ------------------------ */}
 
-      {/* --- ROW 1 --- */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-[1258px] lg:h-[552px] gap-[40px] lg:gap-[63px]">
-        {/* Left Text Block */}
-        <div className="flex flex-col w-full lg:w-1/2 max-w-[600px] gap-6 z-10">
-          <h2 className="font-poppins font-semibold text-[44px] leading-[1.2] tracking-[-0.01em] text-gray-900">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-[1258px] lg:h-[552px] gap-10 lg:gap-[63px]">
+        <div className="flex flex-col w-full lg:w-1/2 max-w-[600px] gap-4 md:gap-6 z-10">
+          <h2 className="font-poppins font-semibold text-[28px] sm:text-[36px] xl:text-[44px] leading-[1.2] tracking-[-0.01em] text-gray-900">
             Your Path to Professional <br className="hidden md:block" /> Growth
             Starts Here!
           </h2>
 
-          <p className="font-satoshi font-normal text-[18px] leading-[1.6] text-gray-500 max-w-[500px]">
+          <p className="font-satoshi font-normal text-[16px] md:text-[18px] leading-[1.6] text-gray-500 max-w-[500px]">
             Explore our curated selection of courses tailored to enhance your
             capabilities and accelerate your career journey. Whether you are
             looking to sharpen specific skills, gain industry expertise, or
@@ -56,11 +52,10 @@ export function FeatureSection() {
             need.
           </p>
 
-          {/* Stats Container */}
-          <div className="flex items-start justify-between w-full max-w-[231px] gap-[16px] mt-4">
+          <div className="flex items-start justify-between w-full max-w-[231px] gap-[16px] mt-2 md:mt-4">
             {STATS.map((stat) => (
               <div key={stat.label} className="flex flex-col gap-1">
-                <span className="font-poppins font-semibold text-[28px] text-blue-600">
+                <span className="font-poppins font-semibold text-[24px] md:text-[28px] text-blue-600">
                   {stat.value}
                 </span>
                 <span className="font-satoshi text-[14px] text-gray-500">
@@ -71,8 +66,7 @@ export function FeatureSection() {
           </div>
         </div>
 
-        {/* Right Image Block */}
-        <div className="relative w-full max-w-[621px] h-[400px] lg:h-[552px] flex justify-center items-end shrink-0">
+        <div className="relative w-full lg:w-1/2 max-w-[621px] h-[300px] sm:h-[400px] lg:h-[552px] flex justify-center items-end">
           <div className="absolute left-[-0px] top-[15%] z-0 hidden lg:block origin-top-left scale-[0.7] opacity-90">
             <CourseCard
               imageSrc="/assets/courseThumbnail/course-1.jpg"
@@ -95,17 +89,15 @@ export function FeatureSection() {
           />
 
           <ProgressCard
-            className="absolute right-12 top-1/4 z-20 hidden md:flex"
+            className="absolute right-4 lg:right-12 top-1/4 z-20 hidden md:flex"
             value="55%"
             progress={40}
           />
         </div>
       </div>
 
-      {/* --- ROW 2 */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1258px] lg:h-[552px] gap-[40px] lg:gap-[63px]">
-        {/* Left Image Block */}
-        <div className="relative w-full max-w-[621px] h-[400px] lg:h-[552px] flex justify-center items-end shrink-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1258px] lg:h-[552px] gap-10 lg:gap-[63px]">
+        <div className="relative w-full lg:w-1/2 max-w-[621px] h-[300px] sm:h-[400px] lg:h-[552px] flex justify-center items-end">
           <Image
             src="/assets/students/student-1.png"
             alt="Student with tablet"
@@ -129,25 +121,23 @@ export function FeatureSection() {
             badge="+12$"
           />
 
-          <HappyStudentsCard className="absolute right-16 bottom-[15%] z-20 hidden md:flex" />
+          <HappyStudentsCard className="absolute right-4 lg:right-16 bottom-[15%] z-20 hidden md:flex" />
         </div>
 
-        {/* Right Text Block */}
-        <div className="flex flex-col w-full lg:w-1/2 max-w-[600px] gap-6 lg:pl-10 z-10">
-          <h2 className="font-poppins font-semibold text-[44px] leading-[1.2] tracking-[-0.01em] text-gray-900">
+        <div className="flex flex-col w-full lg:w-1/2 max-w-[600px] gap-4 md:gap-6 lg:pl-10 z-10">
+          <h2 className="font-poppins font-semibold text-[28px] sm:text-[36px] xl:text-[44px] leading-[1.2] tracking-[-0.01em] text-gray-900">
             Create & Manage <br className="hidden md:block" /> Courses Easily.
           </h2>
 
-          <p className="font-satoshi font-normal text-[18px] leading-[1.6] text-gray-500 max-w-[500px]">
+          <p className="font-satoshi font-normal text-[16px] md:text-[18px] leading-[1.6] text-gray-500 max-w-[500px]">
             ByteSpace supports individuals or entities in the creation,
             publication, and administration of educational courses.
           </p>
 
-          {/* Checklist */}
-          <div className="flex flex-col gap-4 mt-4">
+          <div className="flex flex-col gap-3 md:gap-4 mt-2 md:mt-4">
             {CHECKLIST.map((item) => (
               <div key={item} className="flex items-center gap-3">
-                <CheckCircle2 className="w-6 h-6 text-blue-600 fill-blue-50" />
+                <CheckCircle2 className="w-6 h-6 shrink-0 text-blue-600 fill-blue-50" />
                 <span className="font-satoshi font-medium text-[16px] text-gray-800">
                   {item}
                 </span>
@@ -159,10 +149,6 @@ export function FeatureSection() {
     </section>
   );
 }
-
-/* -------------------------------------------------------------------------- */
-/*                        REUSABLE MICRO-COMPONENTS                           */
-/* -------------------------------------------------------------------------- */
 
 function ProgressCard({
   className,

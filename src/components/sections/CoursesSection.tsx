@@ -1,7 +1,6 @@
 import { CourseCard } from "@/components/ui/CourseCard";
 import { CategoryTabs } from "./CategoryTabs";
 
-
 const COURSES_DATA = [
   {
     id: 1,
@@ -79,27 +78,24 @@ const COURSES_DATA = [
 
 export function CoursesSection() {
   return (
-    <section className="w-full flex flex-col items-center pt-[100px] pb-[100px] px-6 bg-white">
-      
-      <div className="flex flex-col items-center gap-[16px] w-full max-w-[917px] mb-12">
-        <h2 className="font-poppins text-[44px] font-semibold leading-[1.2] tracking-[-0.01em] text-center w-full max-w-[588px] text-gray-900">
-          Discover Your Passion, <br /> Build Your Skills
+    <section className="w-full flex flex-col items-center py-16 md:py-[100px] px-4 sm:px-6 bg-white">
+      <div className="flex flex-col items-center gap-3 md:gap-[16px] w-full max-w-[917px] mb-8 md:mb-12">
+        <h2 className="font-poppins text-[28px] sm:text-[36px] lg:text-[44px] font-semibold leading-[1.2] tracking-[-0.01em] text-center w-full max-w-[588px] text-gray-900">
+          Discover Your Passion, <br className="hidden md:block" /> Build Your Skills
         </h2>
-        
-        <p className="font-satoshi text-[18px] font-normal leading-[1.6] text-center w-full max-w-[917px] text-gray-500">
+
+        <p className="font-satoshi text-[16px] md:text-[18px] font-normal leading-[1.6] text-center w-full max-w-[917px] text-gray-500">
           At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
         </p>
       </div>
 
-      <CategoryTabs/>
-      
+      <CategoryTabs />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] w-full max-w-[1199px]">
-        {COURSES_DATA.map((course) => (
-          <CourseCard key={course.id} {...course} />
-        ))}
-      </div>
-      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 lg:gap-[40px] w-full max-w-[1199px]">
+  {COURSES_DATA.map((course) => (
+    <CourseCard key={course.id} {...course} />
+  ))}
+</div>
     </section>
   );
 }
